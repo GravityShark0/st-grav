@@ -1,5 +1,5 @@
 # st-grav
-a fork of suckless terminal of my own theme
+a fork of st (suckless terminal) with my own theme
 
 st v8.5.0
  
