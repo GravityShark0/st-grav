@@ -11,6 +11,6 @@ patches (most avaliable on https://st.suckless.org):
 - scrollback   (st-scrollback-0.8.5, st-scrollback-reflow-0.8.5.diff, st-scrollback-mouse-20220127-2c5edf2.diff)
 
 Screenshots (on dwm)
-![Singular](https://i.postimg.cc/7PjzFF3v/st.png)
+![Singular](https://i.postimg.cc/cLzGhcqc/singular.png)
 ![Multiple](https://i.postimg.cc/fWVXgz0j/multi.png)
 ![Floating](https://i.postimg.cc/gr9GgqL5/floating.png)
