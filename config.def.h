@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack:pixelsize=16:antalias=true:autohint=true";
-static int borderpx = 1;
+static char *font = "Hack:pixelsize=16:antialias=true:autohint=true";
+static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -14,7 +14,7 @@ static int borderpx = 1;
  * 2: scroll and/or utmp
  * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
- * 5: valuE of shELL IN CONFIG.H
+ * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
@@ -58,7 +58,7 @@ static double maxlatency = 33;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
- * attributetimeout (set to 0 to disable blinking) for the terminal blinking.
+ * attribute.
  */
 static unsigned int blinktimeout = 800;
 
@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.7;
+float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -107,7 +107,7 @@ static const char *colorname[] = {
     [5] = "#5BC2BB", /* magenta */
     [6] = "#A25EC4", /* cyan    */
     [7] = "#b5b4c9", /* white   */
-                                  
+
     /* 8 bright colors */
     [8]  = "#5b5f71", /* black   */
     [9]  = "#FF7A7A", /* red     */
@@ -117,12 +117,14 @@ static const char *colorname[] = {
     [13] = "#78FFF6", /* magenta */
     [14] = "#D37AFF", /* cyan    */
     [15] = "#f0ecfe", /* white   */
-                                   
+
     /* special colors */
     [256] = "#191c25", /* background */
     [257] = "#fdeffd", /* foreground */
 
 	/* more colors can be added after 255 to use with DefaultXX */
+	"#cccccc",
+	"#555555",
 	"gray90", /* default foreground colour */
 	"black", /* default background colour */
 };
@@ -130,7 +132,7 @@ static const char *colorname[] = {
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
@@ -187,6 +189,8 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
+	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
+	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -204,8 +208,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Up,          zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
+	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
@@ -484,4 +488,4 @@ static uint selmasks[] = {
 static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
-	"`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~";
+	"`abcdefghijklmnopqrstuvwxyz{|}~";
