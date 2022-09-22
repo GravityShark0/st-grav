@@ -1,23 +1,34 @@
 # st-grav
-a fork of st (suckless terminal) with my own theme
+a fork of st (suckless terminal) perfected for my liking.
 
-[st v0.8.5](https://st.suckless.org/)
+I wanted st to have the cool patches without having the unneccessary patches to keep it being as lightweight as it can
 
-Fonts : [Hack](https://github.com/source-foundry/Hack), [Font Awesome](https://fontawesome.com/)
+### [st v0.8.5](https://st.suckless.org/)
 
-### Shortcuts (All defaults except these): 
-- > TERMMOD + XK_Up     zoom.i=+1
-- > TERMMOD + XK_Down   zoom.i=-1
+Fonts : [Hack](https://github.com/source-foundry/Hack), [Font Awesome v4 Compatibility](https://fontawesome.com/)
 
+## [Patches](https://st.suckless.org/patches/) (Might remove some patches):
+- boxdraw (st-boxdraw_v2-0.8.5.diff)
+- alpha (st-alpha-20220206-0.8.5) [Needs a compositor]
+- anysize (st-anysize-20220718-baa9357)
+- font2 (st-font2-0.8.5)
+- scrollback  (st-scrollback-0.8.5)
+- sync  (st-appsync-20200618-b27a383)
+- x resources live reload (st-xresources-signal-reloading-20220407-ef05519.diff)
 
-### [Patches](https://st.suckless.org/patches/) :
-- alpha        (st-alpha-20220206-0.8.5) [Needs a compositor]
-- anysize      (st-anysize-20220718-baa9357)
-- scrollback   (st-scrollback-0.8.5, st-scrollback-reflow-0.8.5, st-scrollback-mouse-20220127-2c5edf2)
-- xresources   (st-xresources-20200604-9ba7ecf) (theme is set inside of config.def.h)
-- font2        (st-font2-0.8.5.diff)
-
-### Screenshots (on dwm)
-![Singular](https://i.postimg.cc/cLzGhcqc/singular.png)
-![Multiple](https://i.postimg.cc/fWVXgz0j/multi.png)
-![Floating](https://i.postimg.cc/gr9GgqL5/floating.png)
+### Installation (assumes you have git and base-devel)
+```bash
+git clone https://github.com/GravityShark0/st-grav/
+cd ~/st-grav
+make install
+# for theme ease of use
+cp .grav ~/
+```
+##### Open and reload xresources themes (put it something like .bashrc)
+```bash
+alias open="xrdb merge $1"
+alias reload="kill -USR1 $(pidof st)"
+# or both at the same time
+function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
+```
+### Live reload demonstration and screenshots of theme
