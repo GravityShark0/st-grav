@@ -41,6 +41,19 @@ function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
 
 ![multi](https://i.postimg.cc/wTnqvzCc/multi.png)
 
+### Keybindings (mostly default)
+```
+TERMMOD = Ctrl + Shift
+
+Shift + Page Up   Scroll Up
+Shift + Page Down Scroll Down
+TERMMOD + C       Copy to Clipboard
+TERMMOD + V       Paste from Clipboard
+TERMMOD + Up      Font Size Increase
+TERMMOD + Down    Font Size Decrease
+
+```
+
 #### credits
 - [siduck](https://github.com/siduck/st) (i basically ripped a majority of the ideas from them)
 - [suckless](st.suckless.org) (for being cool)
