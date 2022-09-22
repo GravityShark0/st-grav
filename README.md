@@ -31,7 +31,15 @@ alias reload="kill -USR1 $(pidof st)"
 # or both at the same time
 function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
 ```
-### Live reload demonstration and screenshots of theme
+### Live reload demonstration
+![demo](https://media1.tenor.com/images/3626897a0e57162257785622b8a3e61e/tenor.gif?itemid=26772972)
+### Screenshots 
+
+![full](https://i.postimg.cc/dLKc9sFb/full.png)
+
+![float](https://i.postimg.cc/0Ns9Yf2z/single.png)
+
+![multi](https://i.postimg.cc/wTnqvzCc/multi.png)
 
 #### credits
 - [siduck](https://github.com/siduck/st) (i basically ripped a majority of the ideas from them)
