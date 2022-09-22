@@ -22,7 +22,7 @@ git clone https://github.com/GravityShark0/st-grav/
 cd ~/st-grav
 make install
 # for theme ease of use
-cp .grav ~/
+cp yourtheme ~/.yourtheme
 ```
 ##### Open and reload xresources themes (put it something like .bashrc)
 ```bash
@@ -32,3 +32,7 @@ alias reload="kill -USR1 $(pidof st)"
 function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
 ```
 ### Live reload demonstration and screenshots of theme
+
+#### credits
+- [siduck](https://github.com/siduck/st) (i basically ripped a majority of the ideas from them)
+- [suckless](st.suckless.org) (for being cool)
