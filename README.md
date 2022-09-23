@@ -5,7 +5,7 @@ I wanted st to have the cool patches without having the unneccessary patches to 
 
 ### [st v0.8.5](https://st.suckless.org/)
 
-Fonts : [Hack](https://github.com/source-foundry/Hack), [Font Awesome v4 Compatibility](https://fontawesome.com/)
+Fonts (Required for my Theme) : [Hack](https://github.com/source-foundry/Hack), [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) [~~Font Awesome v4 Compatibility~~](https://fontawesome.com/)
 
 ## [Patches](https://st.suckless.org/patches/) (Might remove some patches):
 - boxdraw (st-boxdraw_v2-0.8.5.diff)
