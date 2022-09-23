@@ -21,8 +21,8 @@ Fonts (Required for my Theme) : [Hack](https://github.com/source-foundry/Hack), 
 git clone https://github.com/GravityShark0/st-grav/
 cd ~/st-grav
 make install
-# for theme ease of use
-cp yourtheme ~/.yourtheme
+# for ease of use
+cp /themes/yourtheme ~/.yourtheme
 ```
 ##### Open and reload xresources themes (put it something like .bashrc)
 ```bash
@@ -31,8 +31,8 @@ alias reload="kill -USR1 $(pidof st)"
 # or both at the same time
 function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
 
-$ open .yourtheme && reload
-$ load .yourtheme
+$ open yourtheme && reload
+$ load yourtheme
 ```
 ###### if you are for some reason is using fish (you can type this manually)
 ```fish
@@ -46,8 +46,8 @@ alias load="emit load"
 # saves aliases so you dont have to type it again
 funcsave open reload load0 load
 
-> open .yourtheme && reload
-> load .yourtheme
+> open yourtheme && reload
+> load yourtheme
 ```
 ### Live reload demonstration
 ![demo](https://media1.tenor.com/images/3626897a0e57162257785622b8a3e61e/tenor.gif?itemid=26772972)
