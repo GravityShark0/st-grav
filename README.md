@@ -34,7 +34,7 @@ function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
 $ open yourtheme && reload
 $ load yourtheme
 ```
-###### if you are for some reason is using fish (you can type this manually)
+###### if you are for some reason is using fish shell (you can type this manually)
 ```fish
 alias open="xrdb merge"
 alias reload="pidof st | xargs kill -s USR1"
