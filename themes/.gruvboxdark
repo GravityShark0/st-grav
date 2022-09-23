@@ -1,0 +1,63 @@
+st.font:            Liberation Mono:pixelsize=12:style=Regular:antialias=true:autohint=true
+st.font2:           Inconsolata for Powerline:pixelsize=12:style=Regular:antialias=true:autohint=true
+
+st.borderpx:        2
+
+st.chscale:         1.0
+st.cwscale:         1.0
+
+st.blinktimeout:    800
+
+st.cursorshape:     2
+
+st.bellvolume:      100
+
+st.termname:        st-256color
+
+st.tabspaces:       8
+
+st.alpha:           0.5
+
+!colors
+st.foreground:   #fdeffd
+st.background:   #191c25
+
+! normal colors (black,red,green,yellow,blue,magenta,cyan,white)
+st.color0:       #282828
+st.color1:       #cc241d
+st.color2:       #98971a
+st.color3:       #d79921
+st.color4:       #458588
+st.color5:       #b16286
+st.color6:       #689d6a
+st.color7:       #a89984
+! bright colors (black,red,green,yellow,blue,magenta,cyan,white)
+
+st.color8:       #928374
+st.color9:       #fb4934
+st.color10:      #b8bb26
+st.color11:      #fabd2f
+st.color12:      #83a598
+st.color13:      #d3869b
+st.color14:      #8ec07c
+st.color15:      #ebdbb2
+
+! dim colors? (red,green,yellow,blue,magenta,cyan)
+st.color16:      #cda869
+st.color17:      #9b703f
+st.color18:      #323537
+st.color19:      #464b50
+st.color20:      #838184
+st.color21:      #c3c3c3
+
+! might not work
+!st.shell:           /bin/sh
+!st.doubleclicktimeout: 300
+!st.tripleclicktimeout: 600
+!st.allowaltscreen: 1
+!st.allowwindowops: 0
+
+!st.minlatency:     8
+!st.maxlatency:     33
+!st.cursorthickness: 2
+
