@@ -38,12 +38,12 @@ $ load .yourtheme
 ```fish
 alias open="xrdb merge"
 alias reload="pidof st | xargs kill -s USR1"
-#for both
+# for both
 function load0 -e load1
     xrdb merge $argv && pidof st | xargs kill -s USR1
 end
 alias load="emit load"
-#saves aliases so you dont have to type it again
+# saves aliases so you dont have to type it again
 funcsave open reload load0 load
 
 > open .yourtheme && reload
