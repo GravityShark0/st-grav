@@ -1,0 +1,64 @@
+st.font:            Liberation Mono:pixelsize=12:style=Regular:anti
+alias=true:autohint=true
+st.font2:           Inconsolata for Powerline:pixelsize=12:style=Re
+gular:antialias=true:autohint=true
+
+st.borderpx:        2
+
+st.chscale:         1.0
+st.cwscale:         1.0
+
+st.blinktimeout:    800
+
+st.cursorshape:     4
+
+st.bellvolume:      0
+
+st.termname:        st-256color
+
+st.tabspaces:       8
+
+st.alpha:           0.8
+
+!colors
+st.foreground:   #fdeffd
+st.background:   #191c25
+
+! normal colors (black,red,green,yellow,blue,magenta,cyan,white)
+st.color0:       #000000  /* black   */
+st.color1:       #ff5555  /* red     */
+st.color2:       #50fa7b  /* green   */
+st.color3:       #f1fa8c  /* yellow  */
+st.color4:       #bd93f9  /* blue    */
+st.color5:       #ff79c6  /* magenta */
+st.color6:       #8be9fd  /* cyan    */
+st.color7:       #bbbbbb  /* white   */
+! bright colors (black,red,green,yellow,blue,magenta,cyan,white)
+
+st.color8:       #44475a  /* black   */
+st.color9:       #ff5555  /* red     */
+st.color10:      #50fa7b  /* green   */
+st.color11:      #f1fa8c  /* yellow  */
+st.color12:      #bd93f9  /* blue    */
+st.color13:      #ff79c6  /* magenta */
+st.color14:      #8be9fd  /* cyan    */
+st.color15:      #ffffff  /* white   */
+
+! dim colors? (red,green,yellow,blue,magenta,cyan)
+st.color16:      #cda869
+st.color17:      #9b703f
+st.color18:      #323537
+st.color19:      #464b50
+st.color20:      #838184
+st.color21:      #c3c3c3
+
+! might not work
+!st.shell:           /bin/sh
+!st.doubleclicktimeout: 300
+!st.tripleclicktimeout: 600
+!st.allowaltscreen: 1
+!st.allowwindowops: 0
+
+!st.minlatency:     8
+!st.maxlatency:     33
+!st.cursorthickness: 2
