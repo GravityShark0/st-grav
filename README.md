@@ -30,6 +30,24 @@ alias open="xrdb merge $1"
 alias reload="kill -USR1 $(pidof st)"
 # or both at the same time
 function load { xrdb merge "$1" && kill -USR1 $(pidof st) }; export load
+
+$ open .yourtheme && reload
+$ load .yourtheme
+```
+###### if you are for some reason is using fish (you can type this manually)
+```fish
+alias open="xrdb merge"
+alias reload="pidof st | xargs kill -s USR1"
+#for both
+function load0 -e load1
+    xrdb merge $argv && pidof st | xargs kill -s USR1
+end
+alias load="emit load"
+#saves aliases so you dont have to type it again
+funcsave open reload load0 load
+
+> open .yourtheme && reload
+> load .yourtheme
 ```
 ### Live reload demonstration
 ![demo](https://media1.tenor.com/images/3626897a0e57162257785622b8a3e61e/tenor.gif?itemid=26772972)
