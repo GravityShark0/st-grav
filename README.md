@@ -70,6 +70,13 @@ TERMMOD + V       Paste from Clipboard
 TERMMOD + Up      Font Size Increase
 TERMMOD + Down    Font Size Decrease
 ```
+
+### Things to try to implement
+- remove some patches
+- add an 'extra' patches option
+- more themes
+- try to make a flexipatch like thing
+
 #### credits
 - [siduck](https://github.com/siduck/st) (i basically ripped a majority of the ideas from them)
 - [suckless](st.suckless.org) (for being cool)
